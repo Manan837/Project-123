@@ -1,3 +1,7 @@
+leftWrist_x = 0;
+rightWrist_x = 0;
+difference = 0;
+
 function setup()
 {
     video = createCapture(VIDEO);
@@ -13,7 +17,6 @@ function setup()
 function draw()
 {
     background("#5196e3");
-    document.getElementById("font_size").innerHTML = "Font Size Of The Text Will Be = "+difference+"px";
     textSize(difference);
     fill("#00ff0a");
     text('Manan',50,400);
@@ -21,10 +24,6 @@ function draw()
 
 function gotPoses(results)
 {
-    if (results.length > 0)
-    {
-        console.log(results);
-    }
     if(results.length > 0)
     {
         console.log(results);
